@@ -139,10 +139,6 @@ Big-O notation describes how the time or space requirements of an operation grow
 
 * When the position/node is already known. Finding the position first can take O(n).
 
-† Typically O(1) for the primary operation; searching through all elements is O(n).
-
-‡ Average case. Worst-case complexity can be higher depending on the implementation and input.
-
 ---
 
 ### Searching Algorithms
