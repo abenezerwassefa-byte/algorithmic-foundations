@@ -126,15 +126,15 @@ Big-O notation describes how the time or space requirements of an operation grow
 | ---------------------------- | --------: | --------: | --------: | --------: | -------: |
 | **Array**                    |      O(1) |      O(n) |      O(n) |      O(n) |     O(n) |
 | **Dynamic Array**            |      O(1) |      O(n) |      O(n) |      O(n) |     O(n) |
-| **Singly Linked List**       |      O(n) |      O(n) |     O(1)* |     O(1)* |     O(n) |
-| **Doubly Linked List**       |      O(n) |      O(n) |     O(1)* |     O(1)* |     O(n) |
-| **Stack**                    |     O(n)† |     O(n)† |      O(1) |      O(1) |     O(n) |
-| **Queue**                    |     O(n)† |     O(n)† |      O(1) |      O(1) |     O(n) |
-| **Hash Table**               |         — |     O(1)‡ |     O(1)‡ |     O(1)‡ |     O(n) |
-| **Binary Search Tree**       | O(log n)‡ | O(log n)‡ | O(log n)‡ | O(log n)‡ |     O(n) |
+| **Singly Linked List**       |      O(n) |      O(n) |     O(1)  |     O(1)  |     O(n) |
+| **Doubly Linked List**       |      O(n) |      O(n) |     O(1)  |     O(1)  |     O(n) |
+| **Stack**                    |     O(n)  |     O(n)  |      O(1) |      O(1) |     O(n) |
+| **Queue**                    |     O(n)  |     O(n)  |      O(1) |      O(1) |     O(n) |
+| **Hash Table**               |         — |     O(1)  |     O(1)  |     O(1)  |     O(n) |
+| **Binary Search Tree**       | O(log n)  | O(log n)  | O(log n)  | O(log n)  |     O(n) |
 | **Heap**                     |         — |      O(n) |  O(log n) |  O(log n) |     O(n) |
 | **Trie**                     |         — |      O(m) |      O(m) |      O(m) |   O(n·m) |
-| **Graph — Adjacency List**   |         — |  O(V + E) |     O(1)‡ |     O(1)‡ | O(V + E) |
+| **Graph — Adjacency List**   |         — |  O(V + E) |     O(1)  |     O(1)  | O(V + E) |
 | **Graph — Adjacency Matrix** |      O(1) |     O(V²) |     O(V²) |     O(V²) |    O(V²) |
 
 * When the position/node is already known. Finding the position first can take O(n).
@@ -150,7 +150,7 @@ Big-O notation describes how the time or space requirements of an operation grow
 | Algorithm                      | Best Case | Average Case | Worst Case | Space |
 | ------------------------------ | --------: | -----------: | ---------: | ----: |
 | **Linear Search**              |      O(1) |         O(n) |       O(n) |  O(1) |
-| **Binary Search**              |      O(1) |     O(log n) |   O(log n) | O(1)* |
+| **Binary Search**              |      O(1) |     O(log n) |   O(log n) | O(1)  |
 | **Depth-First Search (DFS)**   |  O(V + E) |     O(V + E) |   O(V + E) |  O(V) |
 | **Breadth-First Search (BFS)** |  O(V + E) |     O(V + E) |   O(V + E) |  O(V) |
 
@@ -166,7 +166,7 @@ Big-O notation describes how the time or space requirements of an operation grow
 | **Selection Sort** |      O(n²) |        O(n²) |      O(n²) |      O(1) |
 | **Insertion Sort** |       O(n) |        O(n²) |      O(n²) |      O(1) |
 | **Merge Sort**     | O(n log n) |   O(n log n) | O(n log n) |      O(n) |
-| **Quick Sort**     | O(n log n) |   O(n log n) |      O(n²) | O(log n)* |
+| **Quick Sort**     | O(n log n) |   O(n log n) |      O(n²) | O(log n)  |
 | **Heap Sort**      | O(n log n) |   O(n log n) | O(n log n) |      O(1) |
 | **Counting Sort**  |   O(n + k) |     O(n + k) |   O(n + k) |  O(n + k) |
 | **Radix Sort**     |      O(nk) |        O(nk) |      O(nk) |  O(n + k) |
@@ -181,11 +181,11 @@ Big-O notation describes how the time or space requirements of an operation grow
 | ------------------------ | ----------------: | ---------------: |
 | **DFS**                  |          O(V + E) |             O(V) |
 | **BFS**                  |          O(V + E) |             O(V) |
-| **Dijkstra's Algorithm** | O((V + E) log V)* |         O(V + E) |
+| **Dijkstra's Algorithm** | O((V + E) log V)  |         O(V + E) |
 | **Bellman-Ford**         |             O(VE) |             O(V) |
 | **Floyd-Warshall**       |             O(V³) |            O(V²) |
 | **Kruskal's Algorithm**  |        O(E log E) |         O(V + E) |
-| **Prim's Algorithm**     | O((V + E) log V)* |         O(V + E) |
+| **Prim's Algorithm**     | O((V + E) log V)  |         O(V + E) |
 | **Topological Sort**     |          O(V + E) |             O(V) |
 
 * Using a binary heap and adjacency lists.
@@ -201,9 +201,9 @@ Big-O notation describes how the time or space requirements of an operation grow
 | **Pre-order Traversal**   |            O(n) |             O(h) |
 | **Post-order Traversal**  |            O(n) |             O(h) |
 | **Level-order Traversal** |            O(n) |             O(n) |
-| **BST Search**            |       O(log n)* |             O(h) |
-| **BST Insertion**         |       O(log n)* |             O(h) |
-| **BST Deletion**          |       O(log n)* |             O(h) |
+| **BST Search**            |       O(log n)  |             O(h) |
+| **BST Insertion**         |       O(log n)  |             O(h) |
+| **BST Deletion**          |       O(log n)  |             O(h) |
 
 * For a balanced BST. In the worst case, an unbalanced BST can degrade to O(n).
 
@@ -259,15 +259,6 @@ This is a **living repository**.
 New implementations will be added as I encounter, study, and understand new concepts.
 
 It is intentionally incomplete.
-
-The objective is not:
-
-> *"Implement everything."*
-
-It is:
-
-> *"Understand what I implement."*
-
 ---
 
 ## 📚 Topics
@@ -303,22 +294,3 @@ The code in this repository is primarily for **learning and reference**.
 Implementations may favor clarity over production-level optimization. Some implementations may also evolve as my understanding of the underlying concepts improves.
 
 If an implementation looks unnecessarily complicated, that may be because it is exploring the concept rather than trying to provide the shortest possible solution.
-
----
-
-## 🔗 Related
-
-This repository is part of my broader journey through:
-
-**Computer Science → Data Structures & Algorithms → AI Engineering**
-
-Understanding how data is organized and manipulated is fundamental to becoming a better programmer and engineer.
-
----
-
-<div align="center">
-
-**Built through curiosity, implementation, and repetition.**
-
-</div>
-
